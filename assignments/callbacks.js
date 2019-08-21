@@ -55,18 +55,35 @@ function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
   return cb(x * y);
 }
+
+let found = []
 multiplyNums(x, y, function(cb){ console.log(cb)})
 
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
-  for (i=0; i < list.length; i++){
+  /*contained = list.filter(x => (x === item));
+  if (contained.length > 0){
+    return true} else {return false}
+  }*/
+   return cb(item, list);
+  }
+  function itContains(e, arr)
+  {
+    return arr.includes(e);
+  }
+
+  console.log(contains("yo-yo", items, itContains))
+
+   /* for (i=0; i < list.length; i++){
     var thing = list[i];
-    if (thing === item){
-      return cb('true')} //else {return False;}
+    found.push(thing);
+    if (found > 0){
+      return cb('true')} else {return False;}
     }
   }
-contains(items, 'notebook', function(x){console.log(x)})
+  
+contains('notebook', items,  function(x){console.log(x)})
 
 /* STRETCH PROBLEM */
 

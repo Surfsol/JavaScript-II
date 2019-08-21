@@ -96,7 +96,7 @@ console.log(allCaps)
 let allCaps = [];
 
 // why does full name not work
-runners.map((element) =>{
+runners.map((element) => {
 	let first = element.first_name;
 	let last = element.last_name;
 	allCaps.push(`${first.toUpperCase()} ${last}`)
@@ -118,7 +118,7 @@ console.log(largeShirts);
 let ticketPriceTotal = [];
 let allDonations = [];
 
-
+//accumulator keep running total 
 allDonations = runners.reduce(function(accumulator, item){
 	return accumulator + item.donation;
 }, 0); // starts from 0
@@ -130,7 +130,7 @@ console.log(allDonations)
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1 
-// Make a list of companies runners are from.
+// Make an array of companies runners are from.
 // use map
 company_list = []
 
